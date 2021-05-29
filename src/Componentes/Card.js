@@ -1,14 +1,23 @@
+import React from 'react';
 import { Link } from 'react-router-dom'
 
-function Card() {
+class Card extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            pokemon: {}
+        }
+    }
+    render() {
+    const pokemon = this.state.pokemon;
     return (
-        <Link to='/sobre/001'>
+        <Link to={`/sobre/${pokemon.id}`}>
         <div className='card'>
-            <img src='https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png' alt='Bulbasaur'/>
+            <img src={pokemon.image} alt={pokemon.name}/>
             <div className='card-info'>
-                <p className='card-id'>No 001</p>
+                <p className='card-id'>No {pokemon.id}</p>
             </div>
-            <h5>Bulbasaur</h5>
+            <h5>{pokemon.name}</h5>
             <div className='card-categories'>
             <div className='card-category'>
                 <span>Grass</span>
@@ -19,7 +28,13 @@ function Card() {
             </div>
         </div>
         </Link>
-    );
+    );}
+
+    componentDidMount() {
+        this.setState({
+            pokemon: this.props.pokemon
+        })
+    }
 }
 
 export default Card;
