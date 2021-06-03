@@ -17,7 +17,7 @@ class Info extends React.Component {
         return pokemon.types.map((tipo => {
             const typeName = tipo.type.name;
             return (
-                <div className={`type ${typeName}`} key={pokemon.id + '-' + typeName}>
+                <div className={`info__body__category__type info__body__category__type--${typeName}`} key={pokemon.id + '-' + typeName}>
                     <span>{typeName}</span>
                 </div>
             )
@@ -29,7 +29,7 @@ class Info extends React.Component {
         return pokemon.abilities.map(habilidade => {
             const nomeHabilidade = habilidade.ability.name;
             return (
-                <span key={pokemon.id + '-' + nomeHabilidade} className='habilidade'>{nomeHabilidade}</span>
+                <span key={pokemon.id + '-' + nomeHabilidade} className='info__body__ability'>{nomeHabilidade}</span>
             )
         });
     }
@@ -50,26 +50,26 @@ class Info extends React.Component {
 
         return (
             <section className='info'>
-                <div className='info-header'>
+                <div className='info__header'>
                     {pokemon.name}
                 </div>
-                <div className='info-body'>
+                <div className='info__body'>
                     <div className='info-block'>
                     <img src={imageSrc} alt={pokemon.name}/>
                     </div>
-                    <div className='info-block'>
+                    <div className='info__body__block'>
                         <p><strong>Height:</strong> {`${pokemon.height}m`}</p>
                         <p><strong>Weight:</strong> {`${pokemon.weight}kg`}</p>
                         <p><strong>Abilities:</strong> 
                         {this.criarListaHabilidades()}</p>
                         <strong>Types:</strong>
-                        <div className='info-category'>
+                        <div className='info__body__category'>
                             {this.criarListaTipos()}
                         </div>
                     </div>
                 </div>
-                <div className='info-footer'>
-                    <Link to='/'>Voltar</Link>
+                <div className='info_footer'>
+                    <Link className='info_footer_link' to='/'>Voltar</Link>
                 </div>
             </section>
         );}

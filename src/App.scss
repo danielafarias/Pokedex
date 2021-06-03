@@ -1,0 +1,181 @@
+/* Bloco CardList */
+
+html {
+    background-color: #282c34;
+}
+
+a {
+    text-decoration: none;
+}
+
+@mixin pokemonTypes {
+    &--poison {
+        background-color: purple;
+    }
+    
+    &--fire {
+        background-color: red;
+    }
+    
+    &--water {
+        background-color: cornflowerblue;
+    }
+    
+    &--grass {
+        background-color: green;
+    }
+    
+    &--normal {
+        background-color: gray;
+    }
+
+    &--flying {
+        background-color: lightskyblue;
+    }
+}
+
+.card-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-evenly;
+
+    &__card {
+        background-color: #ffffff;
+        border: 1px solid #ffffff;
+        color: #282c34;
+        border-radius: 5px;
+        font-size: 16px;
+        padding: 10px 0;
+        margin: 10px;
+        transition: 0.5s;
+
+        &:hover {
+            opacity: 0.9;
+            cursor: pointer;
+            margin-top: -2px;
+        }
+
+        &__img {
+            width: 100%;
+        }
+
+        &__info {
+            margin: 0 10px
+        }
+        
+        &__id {
+            text-align: left;
+            margin: 0;
+            color: gray;
+            letter-spacing: 0.2em;
+            font-size: 1em;
+        }
+        
+        &__name {
+            font-size: 1.5em;
+            margin: 0;
+        }
+        
+        &__categories {
+            display: flex;
+            justify-content: center;
+        }
+
+        &__category {
+            background-color: teal;
+            color: white;
+            border-radius: 3px;
+            margin: 0 3% 0 0;
+            line-height: 1.5em;
+            width: 30%;
+            font-size: 0.7em;
+            text-align: center;
+
+            @include pokemonTypes
+        }
+    }
+}
+
+/* Bloco Info */
+
+.info {
+    background-color: white;
+    padding: 0 10px;
+
+    &__header {
+        text-align: center;
+        font-size: 2em;
+        font-weight: bold;
+        border-bottom: 1px solid silver;
+        padding: 10px;
+    }
+    
+    &__body {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        &__block {
+            width: 50%;
+        }
+        
+        &__ability {
+            margin: 4px
+        }
+        
+        &__category {
+            margin: 10px 0;
+    
+            &__type {
+                background-color: teal;
+                color: white;
+                border-radius: 3px;
+                padding: 10px 30px;
+                margin: 0 3% 0 0;
+                text-align: center;
+                display: inline-block;
+    
+                @include pokemonTypes
+            }
+        }
+    }
+
+    &_footer {
+        text-align: center;
+        font-size: 2em;
+        font-weight: bold;
+        padding: 20px;
+        border-top: 1px solid silver;
+    
+        &_link {
+            text-decoration: none;
+            background-color: lightskyblue;
+            padding: 10px 30px;
+            border-radius: 10px;
+            color: white;
+            font-size: 1em;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

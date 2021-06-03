@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import React from 'react';
 import CardList from './Componentes/CardList'
 import Info from './Componentes/Info'

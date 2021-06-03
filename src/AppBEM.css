@@ -1,0 +1,171 @@
+html {
+    background-color: #282c34;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Bloco CardList */
+
+.card-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.card-list__card {
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    color: #282c34;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px 0;
+    margin: 10px;
+    transition: 0.5s;
+}
+
+.card-list__card:hover {
+    opacity: 0.9;
+    cursor: pointer;
+    margin-top: -2px;
+}
+
+.card-list__card__img {
+    width: 100%;
+}
+
+.card-list__card__info {
+    margin: 0 10px
+}
+
+.card-list__card__id {
+    text-align: left;
+    margin: 0;
+    color: gray;
+    letter-spacing: 0.2em;
+    font-size: 1em;
+}
+
+.card-list__card__name {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.card-list__card__categories {
+    display: flex;
+    justify-content: center;
+}
+
+.card-list__card__category {
+    background-color: teal;
+    color: white;
+    border-radius: 3px;
+    margin: 0 3% 0 0;
+    line-height: 1.5em;
+    width: 30%;
+    font-size: 0.7em;
+    text-align: center;
+}
+
+.card-list__card__category--poison {
+    background-color: purple;
+}
+
+.card-list__card__category--fire {
+    background-color: red;
+}
+
+.card-list__card__category--water {
+    background-color: lightblue;
+}
+
+.card-list__card__category--grass {
+    background-color: green;
+}
+
+.card-list__card__category--normal {
+    background-color: gray;
+}
+
+/* Bloco Info */
+
+.info {
+    background-color: white;
+    padding: 0 10px;
+}
+
+.info__header {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    border-bottom: 1px solid silver;
+    padding: 10px;
+}
+
+.info__body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.info__body__block {
+    width: 50%;
+}
+
+.info__body__ability {
+    margin: 4px
+}
+
+.info__body__category {
+    margin: 10px 0;
+}
+
+.info__body__category__type {
+    background-color: teal;
+    color: white;
+    border-radius: 3px;
+    padding: 10px 30px;
+    margin: 0 3% 0 0;
+    text-align: center;
+    display: inline-block;
+}
+
+.info_footer {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 20px;
+    border-top: 1px solid silver;
+}
+
+.info_footer_link {
+    text-decoration: none;
+    background-color: lightskyblue;
+    padding: 10px 30px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1em;
+}
+
+.info__body__category__type--poison {
+    background-color: purple;
+}
+
+.info__body__category__type--fire {
+    background-color: red;
+}
+
+.info__body__category__type--water {
+    background-color: lightblue;
+}
+
+.info__body__category__type--grass {
+    background-color: green;
+}
+
+.info__body__category__type--normal {
+    background-color: gray;
+}
